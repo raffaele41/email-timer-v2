@@ -14,22 +14,53 @@ export async function GET() {
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: '600px',
-          height: '200px',
+      <div style={{
+        width: '600px',
+        height: '200px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#1A0505',
+        gap: '0px',
+      }}>
+        {/* Days */}
+        <div style={{
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#1a0505',
-          color: 'white',
-          fontSize: '90px',
-          fontWeight: 'bold',
-          fontFamily: 'sans-serif',
-          letterSpacing: '4px',
-        }}
-      >
-        {days}d : {hours}h
+          width: '280px',
+        }}>
+          <span style={{ color: 'white', fontSize: '90px', fontWeight: 'bold', fontFamily: 'sans-serif', lineHeight: 1 }}>
+            {days}
+          </span>
+          <span style={{ color: 'white', fontSize: '20px', fontFamily: 'sans-serif', marginTop: '8px' }}>
+            days
+          </span>
+        </div>
+
+        {/* Separator */}
+        <div style={{
+          width: '2px',
+          height: '120px',
+          background: 'white',
+        }} />
+
+        {/* Hours */}
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '280px',
+        }}>
+          <span style={{ color: 'white', fontSize: '90px', fontWeight: 'bold', fontFamily: 'sans-serif', lineHeight: 1 }}>
+            {hours}
+          </span>
+          <span style={{ color: 'white', fontSize: '20px', fontFamily: 'sans-serif', marginTop: '8px' }}>
+            hours
+          </span>
+        </div>
       </div>
     ),
     { width: 600, height: 200 }
