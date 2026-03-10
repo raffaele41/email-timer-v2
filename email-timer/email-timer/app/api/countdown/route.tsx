@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#1A0505',
+          background: '#240709',
           gap: '0px',
         }}>
           <div style={{
@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#1A0505',
+          background: '#240709',
         }}>
           <span style={{ color: 'white', fontSize: '30px', fontFamily: 'sans-serif' }}>
             glo — Coming Soon
