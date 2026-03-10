@@ -6,10 +6,12 @@ export async function GET(req: NextRequest) {
     const { createCanvas, GlobalFonts } = await import('@napi-rs/canvas')
     const { join } = await import('path')
 
-    GlobalFonts.registerFromPath(
-      join(process.cwd(), 'email-timer/email-timer/Roboto-VariableFont_wdth,wght.ttf'),
-      'Roboto'
-    )
+    const fontPath = join(process.cwd(), 'email-timer/email-timer/Roboto-VariableFont_wdth,wght.ttf')
+console.log('Font path:', fontPath)
+console.log('CWD:', process.cwd())
+const registered = GlobalFonts.registerFromPath(fontPath, 'Roboto')
+console.log('Font registered:', registered)
+console.log('Available fonts:', GlobalFonts.families)
 
     const launch = new Date('2026-03-31T22:00:00Z')
     const now = new Date()
