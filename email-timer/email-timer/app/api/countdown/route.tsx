@@ -90,8 +90,4 @@ export async function GET(req: NextRequest) {
     return new NextResponse('Error', { status: 500 })
   }
 }
-```
 
-Fai commit di entrambi i file e aspetta il deploy. L'endpoint sarà sempre:
-```
-https://email-timer-v2.vercel.app/api/countdown
