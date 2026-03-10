@@ -5,7 +5,7 @@ export const runtime = 'edge'
 
 export async function GET(req: NextRequest) {
   try {
-    const launch = new Date('2026-04-01T00:00:00Z')
+    const launch = new Date('2026-03-31T22:00:00Z')
     const now = new Date()
 
     let diffHours = Math.floor((launch.getTime() - now.getTime()) / 1000 / 60 / 60)
