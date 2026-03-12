@@ -144,7 +144,7 @@ export async function GET(req: NextRequest) {
 
     console.log(JSON.stringify({ timestamp: now.toISOString(), id, job, diff, gifSize: gif.length }))
 
-    return new NextResponse(gif, {
+    return new NextResponse(new Uint8Array(gif), {
       headers: { 'Content-Type': 'image/gif', 'Cache-Control': 'no-cache, no-store' }
     })
 
@@ -158,14 +158,14 @@ export async function GET(req: NextRequest) {
 
     if (fallback) {
       console.log(JSON.stringify({ timestamp: now.toISOString(), id, job, fallback: true }))
-      return new NextResponse(fallback, {
+      return new NextResponse(new Uint8Array(fallback), {
         status: 200,
         headers: { 'Content-Type': 'image/gif', 'Cache-Control': 'no-cache, no-store' }
       })
     }
 
     const minGif = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64')
-    return new NextResponse(minGif, {
+    return new NextResponse(new Uint8Array(minGif), {
       status: 200,
       headers: { 'Content-Type': 'image/gif', 'Cache-Control': 'no-cache, no-store' }
     })
