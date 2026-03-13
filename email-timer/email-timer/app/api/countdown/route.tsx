@@ -116,7 +116,7 @@ export async function GET(req: NextRequest) {
         ctx.fillStyle = '#240709'
         ctx.fillRect(0, 0, width, height)
         ctx.fillStyle = 'white'
-        ctx.font = `bold 80px ${fontFamily}`
+        ctx.font = `bold 60px ${fontFamily}`
         ctx.textAlign = 'center'
         ctx.textBaseline = 'middle'
         ctx.fillText(days,    90,  100)
