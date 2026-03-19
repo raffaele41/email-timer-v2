@@ -76,7 +76,7 @@ export async function GET(req: NextRequest) {
   const job = req.nextUrl.searchParams.get('job') || 'unknown'
   const now = new Date()
 
-  const launch = new Date('2026-03-31T22:00:00Z')
+  const launch = new Date('2026-04-01T07:00:00Z')
   let diff = Math.floor((launch.getTime() - now.getTime()) / 1000)
   if (diff < 0) diff = 0
 
