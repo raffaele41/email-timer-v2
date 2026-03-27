@@ -87,7 +87,7 @@ export async function GET(req: NextRequest) {
     const fontLoaded = await loadFont()
     const fontFamily = fontLoaded ? 'Roboto' : 'sans-serif'
 
-    const width = 800, height = 200, frames = 20
+    const width = 800, height = 200, frames = 10
     const encoder = new GIFEncoder(width, height)
     const canvas  = createCanvas(width, height)
     const ctx     = canvas.getContext('2d')
